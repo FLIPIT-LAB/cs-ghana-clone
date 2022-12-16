@@ -1,0 +1,124 @@
+<!-- """"""""""""""""""""""""""""""""""""" FOOTER """"""""""""""""""""""""""""""""""""""""""""""""""" -->
+
+<footer class="footer-style border-0">
+    <div class=" container all py-5">
+        <div class="row gy-6 gy-lg-0 py-5">
+            <div class="col-md-4 col-lg-4">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">Products </h4>
+                    <hr class="m-0"> <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="f-head text-white text-uppercase">payment</h6>
+                            <ul class="list-unstyled  mb-0">
+                                <li [routerLink]="['products/collect-payment']" class="f-text footer">Collect Payments</li>
+                                <li [routerLink]="['products/transfer']" class="f-text footer">Transfers (Payout)</li>
+                                <li [routerLink]="['products/payment-links']" class="f-text footer">Payment Links</li>
+                                <!-- <li [routerLink]="['products/checkout-demo']" class="f-text">Checkout Demo</li> -->
+                                <li [routerLink]="['products/utilities']" class="f-text footer">Utility Payment</li>
+                                <li [routerLink]="['products/bulk-pay']" class="f-text footer">Bulk Pay</li>
+                                <li [routerLink]="['products/sms']" class="f-text footer">SMS</li>
+                                <li [routerLink]="['products/ussd']" class="f-text footer">USSD</li>
+                                <li [routerLink]="['products/invoicing']" class="f-text footer">Invoicing</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="f-head text-white text-uppercase">Financial Solutions</h6>
+                            <ul class="list-unstyled mb-0">
+                                <li [routerLink]="['products/pension']" class="f-text footer">Pension Management</li>
+                                <li [routerLink]="['products/banking']" class="f-text footer">Core Banking</li>
+                                <li [routerLink]="['products/ASLAN']"  class="f-text footer">ASLAN</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">Resources </h4>
+                    <hr class="m-0">
+                    <ul class="list-unstyled  mb-0 pt-2">
+                        <li><a [routerLink]="['pricing']" class="f-text footer">Pricing</a></li>
+                        <li [routerLink]="['company/help-center']" class="f-text footer">Help Center</li>
+                        <li [routerLink]="['integration']" class="f-text footer">Integrations</li>
+                        <li [routerLink]="['company/about']" class="f-text footer">About Us</li>
+                        <li [routerLink]="['company/careers']" class="f-text footer">Careers</li>
+                        <li [routerLink]="['blog']" class="f-text footer">Blog</li>
+                        <li [routerLink]="['company/press']" class="f-text footer">Press</li>
+                        <li [routerLink]="['auth/dispute']" class="f-text footer">Why you got charged</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">Developers </h4>
+                    <hr class="m-0">
+                    <ul class="list-unstyled mb-0 pt-2">
+                        <li [routerLink]="['developers/overview']" class="f-text footer">Overview</li>
+                        <li class="f-text footer" (click)="apis()">API Documentation</li>
+                        <li class="f-text none-link">API Status <span class="green"> 🟢 Operational </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">Contact </h4>
+                    <hr class="m-0">
+                    <ul class="list-unstyled mb-0 pt-1">
+                        <li class="f-text none-link">support.ghana@cross-switch.com</li>
+                        <li class="mb-3 f-text footer" (click)="linkedin()" >Linkedin</li>
+                        <li class="mb-2 f-text none-link" style="line-height: 30px">Call lines are open 08:00 to 17:00 GMT, Mondays - Fridays</li><br>
+                        <li class="f-text none-link" style="line-height: 30px">14 Nyaniba CR- OSU Nyaniba Estate OSU La Crescent St, Accra Ghana</li>
+                    </ul>
+                </div>
+            </div>
+        </div> <br><br><br><br>
+
+        <div class="row gy-6 gy-lg-0 pb-5">
+            <div class="col-md-4 col-lg-6 mb-5 mb-lg-0 mb-5">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">
+                        <button class="btn btn-outline-dark px-4 py-3 text-white readonly"> <img style="width: 20px" src="assets/img/product-icons/ghana.png" alt=""> <span class="mx-2">GHANA</span>   </button>
+                        <!-- <select class="form-select w-auto py-2 px-4 bg-transparent border text-white">
+                            <option class="text-dark" value="Ghana" selected> GHANA</option>
+                            <option class="text-dark" value="Nigeria"> NIGERIA</option>
+                        </select> -->
+                    </h4> <br>
+
+                    <div class="row">
+                        <div>
+                            <p class=" mb-0">
+                                Cross switch © 2022 All rights reserved. <br> <a class="text-white" [routerLink]="['company/terms-and-conditions']">Privacy Policy. </a> <a class="text-white"  [routerLink]="['company/terms-and-conditions']">Terms of Service. </a> <span>Refund Policy. </span> 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-6">
+                <div class="widget">
+                    <h4 class="widget-title text-white mb-3">
+                        <img [routerLink]="['/']"  src="./assets/img/transparent-logo.svg" alt="">
+                    </h4> <br>
+
+                    <div class="row">
+                        <div class="">
+                            <ul class="list-unstyled  mb-0">
+                                <li class="f-text none-link" style="line-height: 30px; font-size: 15px;">
+                                        Cross switch is the leading payment solution designed to modernize the finance
+                                        and payments industry
+                                        and solve the problems of traditional payment methods by offering instant
+                                        transactions and immediate
+                                        cross border settlements for the merchant.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+<!-- """"""""""""""""""""""""""""""""""""" FOOTER """"""""""""""""""""""""""""""""""""""""""""""""""" -->

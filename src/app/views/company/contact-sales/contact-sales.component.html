@@ -1,0 +1,107 @@
+<main class="wrapper background">
+
+    <!-- """""""""""""""""""""""""""""""""""""" CONTACT SALES """""""""""""""""""""""""""""""""""""""""""" -->
+    <section class=" py-15" style="padding-top:100px">
+        <div class="container all pt-10 pt-md-5  pt-lg-15" >
+            <div class="col-lg-9 col-xl-8 col-xxl-7 mx-2">
+                <h2 class="font24 weight700 text-uppercase mb-5 px-3 primary violet-line">ENQUIRY FORM</h2>
+            </div>
+            <div class="d-flex gx-lg-8 gx-xl-12 gy-10 gy-lg-0 mx-1 col-lg-6 mb-5">
+                <h3 class="font72 weight700 dark">Contact our sales team for a demo</h3>
+            </div>
+            <div class="mx-lg-2 mx-1">
+                <h3 class="font18 weight400 dark">Please complete the form below to connect with a member of our team.</h3>
+                <p class="my-5 pb-2"><a class="d-text"> <span class="px-2 py-2 arrow"
+                            style="border-radius: 16px; border: 1px solid #043752;">
+                            <fa-icon [icon]="arrow"></fa-icon>
+                        </span> </a></p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- """"""""""""""""""""""""""""""""""""""" FORMS """""""""""""""""""""""""""""""""""" -->
+    <section class=" all py-10 row " id="forms">
+        <div class="container">
+            <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0 justify-content-between align-items-start">
+                <div class="all col-lg-6 mt-lg-2 mb-lg-0 mb-4 mx-lg-2 mx-0">
+                    <form role="form" method="Post" #salesForm="ngForm" (ngSubmit)="Send()">
+                        <div class=" mb-4">
+                            <input id="textInputExample" type="text" class="form-control input py-4 px-4" placeholder="Enter Full Name"  [(ngModel)]="get.name" name="name" required>
+                        </div>
+                        <div class=" mb-4">
+                            <input id="textInputExample" type="text" class="form-control input py-4 px-4" placeholder="Enter Company Name"  [(ngModel)]="get.company_name" name="company_name" required>
+                        </div>
+                        <div class=" mb-4">
+                            <input id="textInputExample" type="email" class="form-control input py-4 px-4" placeholder="Enter Email Address"  [(ngModel)]="get.email" name="email" required>
+                        </div>
+                        <div class="form-select-wrapper mb-4">
+                            <select class="form-select py-4 px-4" aria-label="Default select example"  [(ngModel)]="get.country" name="country" required>
+                                <option [ngValue]="null" [disabled]="true" >Select Country</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Benin">Benin</option>
+                                <option value="Nigeria">Nigeria</option>
+                            </select>
+                        </div>
+                        <div class=" mb-4">
+                            <input id="textInputExample" type="tel" class="form-control input py-4 px-4" placeholder="Enter Phone Number"  [(ngModel)]="get.mobile" name="mobile" required>
+                        </div>
+                        <div class="form-select-wrapper mb-4">
+                            <select class="form-select py-4 px-4" aria-label="Default select example" [(ngModel)]="get.service" name="service" required>
+                                <option [ngValue]="null" [disabled]="true" >Service</option>
+                                <option value="Banking">Banking</option>
+                            </select>
+                        </div>
+                        <div class="form-select-wrapper mb-4">
+                            <select class="form-select py-4 px-4" aria-label="Default select example" [(ngModel)]="get.method" name="method" required>
+                                <option [ngValue]="null" [disabled]="true" >Payment Method</option>
+                                <option value="Mobile Money">Mobile Money</option>
+                                <option value="Bank">Bank</option>
+                                <option value="Card">Card</option>
+                            </select>
+                        </div>
+                        <div class=" mb-lg-5 mb-3">
+                            <textarea id="textareaExample" class="form-control py-4 px-4" placeholder="How can we help ?" style="height: 150px" [(ngModel)]="get.message" name="message" required></textarea>
+                        </div> <br><br>
+
+                        <button [disabled]="!salesForm.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3">Get in touch</button>
+                    </form>
+                </div> <br><br><br><br><br>
+
+                <div class="col-lg-5 d-flex flex-column justify-content-end mt-5">
+                    <div class="col-12 d-flex justify-content-lg-end mb-4 mb-lg-5">
+                        <div class="col-lg-7">
+                            <div class="widget">
+                                <div class="widget-title text-white mb-4"> <img style="width: 64px"
+                                        src="./assets/img/product-icons/address.png" alt=""> </div>
+                                <h4 class="widget-title primary weight700 mb-3 font32"> Find us</h4>
+                                <p href="#" class="f secondary weight400 font18 mb-3">14 Nyaniba CR- OSU Nyaniba Estate OSU La Crescent St, Accra Ghana </p>
+                                <p class="mb-0 mb-3 font18 fw-bold primary"><a>Visit our office <span
+                                            class="border px-4 mx-2 py-1" style="border-radius: 16px;">
+                                            <fa-icon [icon]="right"></fa-icon></span> </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div> <br>
+                    <div class="col-12 d-flex justify-content-lg-end">
+                        <div class="col-lg-7">
+                            <div class="widget">
+                                <div class="widget-title text-white mb-4"> <img style="width: 64px"
+                                        src="./assets/img/product-icons/call.png" alt=""> </div>
+                                <h4 class="widget-title primary mb-3 weight700 font32"> Contact us</h4>
+                                <p href="#" class="secondary font18 mb-3 weight400"> +233 20 200 2386 </p>
+                                <p href="#" class="secondary font18 mb-3 weight400"> support.ghana@cross-switch.com </p>
+                                <a href="#" class="green">🟢 Available between 8AM to 6PM GMT </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+     <!-- """"""""""""""""""""""""""""""""""""""" Ready to get started """""""""""""""""""""""""""""""""""" -->
+    <app-create-account></app-create-account> 
+
+</main>

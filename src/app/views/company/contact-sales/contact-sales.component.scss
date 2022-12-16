@@ -1,0 +1,19 @@
+.arrow{
+    transform: rotate(190deg);
+}
+
+input, select, textarea{
+    border-radius: 36px;
+    color: grey;
+    font-size: 14px;
+}
+
+::placeholder, option{
+    font-size: 14px;
+    color: grey;
+}
+
+
+*:focus {
+    outline: none;
+}

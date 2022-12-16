@@ -1,0 +1,122 @@
+<main class="wrapper background" id="wrapper">
+
+    <!-- """"""""""""""""""""""""""""""""""""""" FORMS """""""""""""""""""""""""""""""""""" -->
+    <section id="forms">
+        <div class="container all">
+            <div class="row align-items-lg-end align-items-start">
+                <div class="col-lg-6 d-flex flex-column mt-5">
+                    <h1 class="dark font40 weight700">Refund and reversal</h1><br><br><br>
+                    <h6 class="secondary levy-font weight500">YOU ARE PROTECTED FROM:</h6><br><br>
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Unwarranted charge</span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Charged for something you didn't purchase.</small>                    
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Cancelled order </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Your order never arrived.</small>                    
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Significance difference of order </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Order arrived, but it's significantly different from what was displayed and described.</small>                    
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-6 mt-lg-2 mb-lg-0 mb-4 p-lg-5 px-2 py-5 border form-container">
+                    <div class="mb-5">
+                        <h4 class="font40 weight700 dark">Fill in your query</h4>
+                        <small class="dark weight300 levy-font">Provided that your payment scenario is eligible, we promise to deliver full refund</small>
+                    </div>
+                    <form role="form" method="Post" #disputeForm="ngForm" (ngSubmit)="Send()">
+                        
+                        <!-- <div class="form-select-wrapper mb-4">
+                            <label for="" class="dark font14 weight600 mb-2">WHAT'S YOUR NAME?</label>
+                            <input type="text" class="form-control py-4 border-0" placeholder="FirstName LastName" [(ngModel)]="get.name" name="name" required>
+                        </div> -->
+
+                        <div class="form-select-wrapper mb-4">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="" class="dark font14 weight600 mb-2">WHAT'S YOUR NAME?</label>
+                                    <input type="text" class="form-control py-4 border-0" placeholder="First & Last Name" [(ngModel)]="get.name" name="name" minlength="6" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="" class="dark font14 weight600 mb-2">HOW MUCH WERE YOU CHARGED ?</label>
+                                    <div class="input-group mb-3 border">
+                                        <button class="btn disabled text-muted px-4 weight400 levy-font" type="button" data-bs-toggle="dropdown" aria-expanded="false" translate>{{currency}}</button>
+                                        <input type="number" class="form-control py-4 border-0" placeholder="e.g 100" [(ngModel)]="get.amount" name="amount" required>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <!-- <div class="form-select-wrapper mb-4">
+                            <label for="" class="dark font14 weight600 mb-2">HOW MUCH WERE YOU CHARGED ?</label>
+                            <div class="input-group mb-3 border">
+                                <button class="btn disabled text-muted px-4 weight400 levy-font" type="button" data-bs-toggle="dropdown" aria-expanded="false" translate>{{currency}}</button>
+                                <input type="number" class="form-control py-4 border-0" placeholder="e.g 100" [(ngModel)]="get.amount" name="amount" required>
+                            </div>
+                        </div> -->
+
+                        <div class="form-select-wrapper mb-4">
+                            <label for="" class="dark font14 weight600 mb-2">WHEN DID YOU MAKE THE DEBIT ALERT ?</label>
+                            <div class="input-group mb-3 border">
+                                <button class="btn disabled text-muted px-4 weight400 levy-font" type="button" >Select Date <img width="20px" src="./assets/img/product-icons/calendar.png" alt=""> </button>
+                                <input type="date" class="form-control py-4 border-0" [(ngModel)]="get.debitDate" name="debitDate" required aria-label="Text input with dropdown button">
+                              </div>
+                        </div>
+
+                        <div class="form-select-wrapper mb-4">
+                            <label for="" class="dark font14 weight600 mb-2">HOW DID YOU MAKE THE DEBIT ?</label>
+                            <select class="form-select py-4 px-4" aria-label="Default select example" [(ngModel)]="get.method" name="method" required>
+                                <!-- <option selected>Select Method</option> -->
+                                <option [ngValue]="'null'" disabled>Select Method</option>
+                                <option value="CARD">I paid with my debit card</option>
+                                <option value="MOMO">I paid with my momo</option>
+                            </select>
+                        </div>
+
+                        <div class="row" *ngIf="get.method == 'CARD'">
+                            <div class="col-sm-6 mb-4">
+                                <label for="" class="dark font14 weight600 mb-2">FIRST SIX DIGITS OF YOUR CARD</label>
+                                <input type="number" class="form-control py-4 "  pattern=".{6}" maxlength="6" placeholder="e.g 123456"  [(ngModel)]="get.first_digits" name="first_digits" required>
+                            </div>
+                            <div class="col-sm-6 mb-4">
+                                <label for="" class="dark font14 weight600 mb-2">LAST SIX DIGITS OF YOUR CARD</label>
+                                    <input type="number" class="form-control py-4" pattern=".{6}" maxlength="6" placeholder="e.g 098765"  [(ngModel)]="get.last_digits" name="last_digits" required>
+                            </div>
+                        </div> 
+
+                        <div class="form-select-wrapper mb-4" *ngIf="get.method == 'MOMO'">
+                            <label for="" class="dark font14 weight600 mb-2">MOBILE MONEY NUMBER </label>
+                            <div class="input-group mb-3 border">
+                                <button class="btn disabled text-muted px-4 weight400 levy-font" type="button" data-bs-toggle="dropdown" aria-expanded="false" translate>+233</button>
+                                <input type="number" class="form-control py-4 border-0" placeholder="e.g 054 000 0000" [(ngModel)]="get.mobile" name="mobile" required>
+                              </div>
+                        </div>
+                        <br>
+
+                        <!-- <button [disabled]="!disputeForm.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3">Check Payment</button> -->
+                        <button [disabled]="!disputeForm.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3"> <span *ngIf="submitted == false" class="fw-bold"> Check Payment</span>  <span *ngIf="submitted == true">Please Wait <img style="width: 40px" src="assets/img/loader1.svg" alt=""> </span></button>
+                    </form>
+                </div> <br><br><br><br><br>
+            </div>
+        </div>
+    </section>
+
+</main>

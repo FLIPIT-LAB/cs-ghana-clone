@@ -1,0 +1,12 @@
+.footer:hover{
+    text-decoration: underline;
+}
+
+.social-media{
+    width: 30px;  filter: invert(100%);
+}
+.social-media:hover{
+    width: 30px;  filter: invert(70%);
+    transform: scale(1.1);
+    transition: .2ease ease-in;
+}

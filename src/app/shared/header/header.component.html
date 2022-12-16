@@ -1,0 +1,319 @@
+<!-- ###################################### header start ##################################### -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex align-items-center justify-content-lg-between">
+     <a class="logo me-auto me-lg-0" [routerLink]="['/']" ><img src="./assets/img/logo.svg" alt="" /></a>
+     <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+           <li class="nav-item dropdown font18">
+              <a class="secondary weight700 font16 px-4" style="font-weight: 600" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                Products
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="d-flex flex-lg-row flex-column">
+                  <div class="">
+                    <p class="px-4 py-2 font12 secondary weight600">PAYMENT SERVICE</p>
+                    <li class="mb-2">
+                      <a class="dropdown-item" [routerLink]="['products/collect-payment']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/Payment.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class=" p-title weight700" style="margin-bottom: 5px;">Collect Payment</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Collect payment seamlessly and secured</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/transfer']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/transfer.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Transfers (Payout)</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Make single or bulk transfers to accounts </small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/checkout']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/checkout.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Checkout</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">A robust payment ordering system</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/payment-links']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center ">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/payment-links.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Payment Links</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Accept payment from anyone in the world</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item" [routerLink]="['products/invoicing']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/invoicing.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Invoicing</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Create beautiful online invoices for customers</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item" [routerLink]="['products/request-to-pay']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/request.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Request to Pay</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Handle payment in new ways </small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item" [routerLink]="['products/bulk-pay']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/bulk-pay.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Bulk Pay</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Generate and distribute payment in bulk</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/utilities']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/utilities.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">Utilities Payment</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Simple, fast and easy way to process bill payment</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/ussd']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/ussd.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">USSD</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Access payment on USSD</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="mb-2">
+                      <a class="dropdown-item"  [routerLink]="['products/sms']" (click)="close()">
+                        <div class="">
+                          <div class="d-flex flex-row align-items-center">
+                            <div class="">
+                             <span class=""><img style="width: 40px" src="./assets/img/product-icons/sms.png" alt=""></span>
+                            </div>
+                            <div class="mx-2">
+                              <h6 class="p-title weight700" style="margin-bottom: 5px;">SMS</h6>
+                              <small class="mb-0 p-text d-none d-lg-flex d-md-none">Secure payment through sms</small>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+
+                  </div>
+
+                  <div>
+                    <p class="px-4 py-2 font12 secondary weight600">FINANCIAL SOLUTIONS</p>
+
+                    <li class="mb-2">
+                       <a class="dropdown-item"  [routerLink]="['products/pension']" (click)="close()">
+                         <div class="">
+                           <div class="d-flex flex-row align-items-center">
+                             <div class="">
+                              <span class=""><img style="width: 40px" src="./assets/img/product-icons/pension.png" alt=""></span>
+                             </div>
+                             <div class="mx-2">
+                               <h6 class="p-title weight700 " style="margin-bottom: 5px;">Pension Managment System</h6>
+                               <small class="mb-0 p-text d-none d-lg-flex d-md-none">Access our premium pension solution</small>
+                             </div>
+                           </div>
+                         </div>
+                       </a>
+                     </li>
+
+                    <li class="mb-2">
+                       <a class="dropdown-item"  [routerLink]="['products/banking']" (click)="close()">
+                         <div class="">
+                           <div class="d-flex flex-row align-items-center">
+                             <div class="">
+                              <span class=""><img style="width: 40px" src="./assets/img/product-icons/core-banking.png" alt=""></span>
+                             </div>
+                             <div class="mx-2">
+                               <h6 class="p-title weight700" style="margin-bottom: 5px;">Core Banking </h6>
+                               <small class="mb-0 p-text d-none d-lg-flex d-md-none">Full access to banking management</small>
+                             </div>
+                           </div>
+                         </div>
+                       </a>
+                     </li>
+
+                    <li class="mb-2">
+                       <a class="dropdown-item" [routerLink]="['products/ASLAN']" (click)="close()">
+                         <div class="">
+                           <div class="d-flex flex-row align-items-center">
+                             <div class="">
+                              <span class=""><img style="width: 40px" src="./assets/img/product-icons/aslan.png" alt=""></span>
+                             </div>
+                             <div class="mx-2">
+                               <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">ASLAN</h6>
+                               <small class="mb-0 p-text d-none d-lg-flex d-md-none">Our highly scalable SAAS product</small>
+                             </div>
+                           </div>
+                         </div>
+                       </a>
+                     </li>
+
+                  </div>
+                </div>
+              </ul>
+            </li>
+           <li><a [routerLink]="['pricing']"  (click)="close()" class="nav-link scrollto secondary font16 px-4" style="font-weight: 600">Pricing</a></li>
+           <li><a  [routerLink]="['company/press']"  (click)="close()" class="nav-link scrollto secondary font16 px-4 d-block d-lg-none d-md-none" style="font-weight: 600">Contact Us</a></li>
+           <li class="dropdown">
+              <a class="secondary font16 px-4" style="font-weight: 600"><span>Developers</span></a>
+              <ul class="px-2">
+                <p class="px-3 pt-2 font12 secondary weight600">DEVELOPERS</p>
+                  <li class="mb-3">
+                    <a class=""  [routerLink]="['developers/overview']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Overview</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Complete API suite for integrations </small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="" (click)="apis()">
+                          <div class="">
+                            <h6 class="p-title weight700 text-start" style="margin-bottom: 5px;">Documentation</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Developer documentation</small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Status</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none"> <span class="green">🟢 API Operational</span> </small>
+                          </div>
+                    </a>
+                  </li>
+              </ul>
+           </li>
+           <li class="dropdown">
+              <a class="secondary font16 px-4" style="font-weight: 600"><span>Company</span></a>
+              <ul class="px-2">
+                <p class="px-3 pt-2 font12 secondary weight600">COMPANY</p>
+                  <li class="mb-3">
+                    <a class=""  [routerLink]="['company/about']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">About Us</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Learn about our mission</small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class=""  [routerLink]="['company/help-center']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Help Center</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Get Support for you business</small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class=""  [routerLink]="['company/careers']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Careers</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Join us build the future in finance</small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class=""  [routerLink]="['blog']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Blog</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Stay updated on news and products</small>
+                          </div>
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class=""  [routerLink]="['company/press']" (click)="close()">
+                          <div class="">
+                            <h6 class=" p-title weight700 text-start" style="margin-bottom: 5px;">Press</h6>
+                            <small class="mb-0 p-text text-start d-none d-lg-flex d-md-none">Press assets and guidelines</small>
+                          </div>
+                    </a>
+                  </li>
+              </ul>
+           </li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle text-dark" id="close"></i>
+     </nav>
+     <div class="d-flex align-items-center">
+        <a  [routerLink]="['company/contact-us']" class="nav-link link scrollto d-none d-lg-flex d-md-none secondary font16" style="font-weight: 600">Contact Us</a>
+        <a [routerLink]="['auth/signup']" class="red-button btn py-3 scrollto d-none d-lg-flex font16 weight600 text-white">Create an account</a>
+     </div>
+  </div>
+</header>
+<!-- ############################## header end ##################################### -->

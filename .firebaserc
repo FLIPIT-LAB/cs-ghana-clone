@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cross-switch": {
+      "hosting": {
+        "cs-gh-website": [
+          "cs-ghana"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cross-switch"
+  }
+}

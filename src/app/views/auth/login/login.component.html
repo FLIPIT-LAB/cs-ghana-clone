@@ -1,0 +1,40 @@
+<main class="wrapper background" id="wrapper" >
+
+    <!-- """"""""""""""""""""""""""""""""""""""" FORMS """""""""""""""""""""""""""""""""""" -->
+    <section id="forms">
+        <div class="container all">
+            <div class=" row justify-content-lg-center">
+
+                <div class="col-lg-5 mt-lg-2 mb-lg-0 mb-4 p-lg-5 px3 py-5 border form-container">
+                    <div class="mb-5">
+                        <h4 class="font40 weight700 dark">Login to your account</h4>
+                        <small class="dark weight300 levy-font">Don't have an account? <a [routerLink]="['../signup']" class="dark weight600 text-decoration-underline">Create an account here.</a>  </small>
+                    </div>
+                    <form role="form" #loginform="ngForm" (ngSubmit)="login()">
+                        
+                            <div class="form-select-wrapper mb-4">
+                                <input type="text" name="username" [(ngModel)]="log.username" class="form-control  p-4" placeholder="username or email" autofocus required>
+                            </div>
+
+                            <div class="form-select-wrapper mb-3">
+                                <input type="password" name="password" [(ngModel)]="log.password" minlength="6" class="form-control  p-4" placeholder="**********" required>
+                           </div> 
+
+                            <div class="form-select-wrapper mb-5">
+                                 <a [routerLink]="['../forgot-password']" class="dark weight600 levy-font">Forgot Password?</a>
+                           </div> 
+
+                           <div class="mb-5 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label text-muted levy-font weight500 dark " for="exampleCheck1">Save my login details </label>
+                          
+                        </div>
+
+                        <button [disabled]="!loginform.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3"> <span *ngIf="submitted == false" class="fw-bold"> Login</span>  <span *ngIf="submitted == true">please wait <img style="width: 40px" src="assets/img/loader1.svg" alt=""> </span></button>
+                    </form>
+                </div> <br><br><br><br><br>
+            </div>
+        </div>
+    </section>
+
+</main>

@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+*,body{
+    font-family: 'Readex Pro', sans-serif !important;
+}
+
+.container{
+    max-width: 95vw !important;
+}
+
+  .none-link{
+    cursor:not-allowed !important;
+}
+  .none-link:hover{
+    cursor:unset !important;
+    color: unset;
+}
+
+.border-box{
+    border: 1px solid #043752;
+}
+
+a:hover{
+    transform: scale(1.005);
+    transition: .04s ease-in-out
+}
+
+.filter-button{
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 12px 10px 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #0C1248;
+    /* margin-bottom: 10px; */
+    transition: all ease-in-out 0.3s;
+    border: 1px solid #0C1248;
+}
+
+.filter-button:hover, .uk-active {
+    color: #fff !important;
+    background-color: #0C1248 !important;
+  }
+
+  .filter-link{
+    background-color: transparent !important;
+  }

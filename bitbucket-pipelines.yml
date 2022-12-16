@@ -1,0 +1,29 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+# image: atlassian/default-image:2
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script: # Modify the commands below to build your repository.
+          - npm install
+          # - npm run test
+          - npm run deploy
+          - pipe: atlassian/firebase-deploy:0.2.0
+            variables:
+              FIREBASE_TOKEN: $FIREBASE_TOKEN
+              PROJECT_ID: 'cross-switch' # Optional.
+              # MESSAGE: "<string>" # Optional.
+              # EXTRA_ARGS: "<string>" # Optional.
+              # DEBUG: "<boolean>" # Optional.
+    - step:
+        name: Deploy to test
+        deployment: test # can be test, staging or production.
+        # trigger: manual  # Uncomment to make this a manual deployment.
+        script:
+          - echo "Deploying to test environment"

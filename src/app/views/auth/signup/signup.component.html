@@ -1,0 +1,107 @@
+<main class="wrapper background" id="wrapper">
+
+    <!-- """"""""""""""""""""""""""""""""""""""" FORMS """""""""""""""""""""""""""""""""""" -->
+    <section id="forms">
+        <div class="container all">
+            <div class="row align-items-start">
+                <div class="col-lg-6 d-flex flex-column mt-lg-5">
+                    <!-- <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Get started in 3 easy steps </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Integrate with developer-friendly APIs with fast setup</small>                    
+                        </div>
+                    </div> -->
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Create account </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Integrate with developer-friendly APIs with fast setup</small>                    
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Access sandbox for UAT testing </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Accept credit cards, Mobile Money, Bank account and more</small>                    
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="">
+                            <img style="width: 40px" src="assets/img/product-icons/red-check.png" alt="">
+                            <span class="d-text mx-2 secondary weight400 font18"> Receive one-off or recurring payments </span>
+                        </div>
+                        <div class=" pb-4 mx-5 px-1">
+                             <small class="dark weight300 font14">Seamless and smart payment means less waiting time for your customers</small>                    
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-6 mt-lg-2 mb-lg-0 mb-4 p-lg-5 px-2 py-5 border form-container">
+                    <div class="mb-5">
+                        <h4 class="font40 weight700 dark">Create an account</h4>
+                        <small class="dark weight300 levy-font">Already have an account? <a [routerLink]="['../login']" class="dark weight600 text-decoration-underline">Login</a> </small>
+                    </div>
+                    <form role="form" method="Post" #signupForm="ngForm" (ngSubmit)="signup()">
+                        
+                            <div class="form-select-wrapper mb-4">
+                                 <!-- <input type="text" class="form-control p-4" placeholder="Business Name" required> -->
+                                 <input type="text" class="form-control p-4" placeholder="Business Name" [(ngModel)]="get.business_name" name="businessName" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6  mb-4">
+                                    <!-- <input type="text" class="form-control p-4 " placeholder="Last Name" required> -->
+                                    <input type="text" class="form-control p-4" placeholder="Last Name" [(ngModel)]="get.lastname" name="lastname" required>
+                                </div>
+                                <div class="col-sm-6 mb-4">
+                                    <!-- <input type="text" class="form-control p-4 " placeholder="First Name" required> -->
+                                    <input type="text" class="form-control p-4" placeholder="First Name" [(ngModel)]="get.firstname" name="firstname" required>
+                                </div>
+                              </div>
+
+                              <div class="form-select-wrapper mb-4">
+                                <!-- <input type="tel" class="form-control p-4 " placeholder="Enter Phone Number with Country Code" required> -->
+                                <input type="tel" class="form-control p-4" placeholder="Enter Phone Number with Country Code" [(ngModel)]="get.mobile" name="mobile" required>
+                           </div> 
+
+                              <div class="form-select-wrapper mb-4">
+                                <!-- <input type="email" class="form-control p-4 " placeholder="Enter Email Address" required> -->
+                                <input type="email" class="form-control p-4" placeholder="Enter Email Address" [(ngModel)]="get.email" name="email" required  pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$">
+                           </div> 
+
+                              <div class="form-select-wrapper mb-4">
+                                <!-- <input type="password" class="form-control p-4 " minlength="6" placeholder="Create Password" required> -->
+                                <input [type]="show ? 'text' : 'password'"  class="form-control p-4" placeholder="Create Password" [(ngModel)]="get.password" name="password" id="id_password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%?&])[A-Za-z\d$@$!%?&]{8,}$" title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters">
+                                <div class="my-2"> 
+                                    <input type="checkbox" (click)="password()" class="form-check-label form-check-input"> <span class="dark font14 weight500"> {{show ?  'Hide Password' : 'Show password'}}</span> <br>
+                                </div>
+                                <small class="dark weight300 font14">Passwords must have at least 8 characters and contain at least one of the following: uppercase letters, lowercase letters, numbers, and symbols.</small>
+                           
+                            </div> 
+
+                            <!-- <div class="form-select-wrapper mb-4">
+                                <input type="password" class="form-control p-4 " placeholder="Confirm Password">
+                           </div>  -->
+
+                           <div class="mb-5 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="get.agree" name="agree"  required>
+                            <label class="form-check-label font16 weight400 dark " for="exampleCheck1">I agree to the processing of my personal data by Cross Switch Ghana as described in the <a [routerLink]="['/company/terms-and-conditions']" routerLinkActive="router-link-active"  class="dark weight600">Privacy Policy</a> </label>
+                          </div>
+
+                        <!-- <button [disabled]="!signupForm.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3">Get Started</button> -->
+                        <button [disabled]="!signupForm.valid" class="btn primary-bg col-12 text-white weight600 rounded py-lg-4 py-3"> <span *ngIf="submitted == false" class="fw-bold"> Get Started</span>  <span *ngIf="submitted == true">Please Wait <img style="width: 40px" src="assets/img/loader1.svg" alt=""> </span></button>
+                    </form>
+                </div> <br><br><br><br><br>
+            </div>
+        </div>
+    </section>
+
+</main>

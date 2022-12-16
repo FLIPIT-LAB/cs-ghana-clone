@@ -1,0 +1,40 @@
+#wrapper{
+    padding-top: 100px;
+    }
+    
+    .arrow{
+        transform: rotate(190deg);
+    }
+    
+    input, select, textarea{
+        border-radius: 36px;
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+     ::placeholder, option{
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    
+    *:focus {
+        outline: none;
+    }
+    
+    .form-container{
+        border-radius: 16px;
+    }
+    
+    .group-btn{
+        color: rgba(0, 0, 0, 0.3);
+        font-weight: 500;
+    }
+
+    @media (max-width:768px) {
+        #wrapper{
+            padding-top: 20px;
+            }
+    }
